@@ -1,6 +1,6 @@
 package co.edu.uniquindio.estudiante.model;
 
-public class estudiante {
+public class Estudiante {
     private String nombre;
     private String correo;
     private int semestre;
