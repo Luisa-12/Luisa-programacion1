@@ -105,7 +105,7 @@ public class Main {
         double notaMaxEstudiante2 = notaMaximaE2(estudiante2.getNota1(), estudiante2.getNota2(), estudiante2.getNota3());
         System.out.println("La nota maxima del estudiante 2 es: " + notaMaxEstudiante2);
 
-        // Funcion que obtenga la nota maxima del estudiante 2
+        // Funcion que obtenga la nota maxima del estudiante 3
 
         double notaMaximaEstudiante3 = notaMaximaE3(estudiante3.getNota1(), estudiante3.getNota2(), estudiante3.getNota3());
         System.out.println("La nota maxima del estudiante 3 es: " + notaMaximaEstudiante3);
