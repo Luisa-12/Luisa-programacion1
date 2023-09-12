@@ -7,11 +7,11 @@ public class Curso {
     private String grupo;
     private int creditos;
     private String jornada;
-
     private Estudiante estudiante1;
     private Estudiante estudiante2;
     private Estudiante estudiante3;
     private Docente docente;
+
 
     public Curso(String nombre, int semestre, String grupo, int creditos, String jornada) {
         this.nombre = nombre;
@@ -19,8 +19,8 @@ public class Curso {
         this.grupo = grupo;
         this.creditos = creditos;
         this.jornada = jornada;
-
     }
+
     public String getNombre() {
         return nombre;
     }
@@ -59,7 +59,6 @@ public class Curso {
 
     public void setJornada(String jornada) {
         this.jornada = jornada;
-
     }
 
     public Estudiante getEstudiante1() {
@@ -94,5 +93,28 @@ public class Curso {
         this.docente = docente;
     }
 
-}
+    /**
+     * Metodo para mostrar la informacion de los estudiantes del curso
+     */
+    public void mostrarInformacionEstudiantes() {
+        String informacionEstudiante1 = getEstudiante1().obtenerInformacion();
+        String informacionEstudiante2 = getEstudiante2().obtenerInformacion();
+        String informacionEstudiante3 = getEstudiante3().obtenerInformacion();
+        System.out.println("Informacion del estudiante 1: "+ informacionEstudiante1);
+        System.out.println("Informacion del estudiante 2: "+ informacionEstudiante2);
+        System.out.println("Informacion del estudiante 3: "+ informacionEstudiante3);
+    }
 
+    public double obtenerPromedioCurso(){
+        double promedioEstuadiante1 = 0.0;
+        double promedioEstuadiante2 = 0.0;
+        double promedioEstuadiante3 = 0.0;
+        double promedioCurso = 0.0;
+        promedioEstuadiante1 = getEstudiante1().calcularPromedio();
+        promedioEstuadiante2 = getEstudiante2().calcularPromedio();
+        promedioEstuadiante3 = getEstudiante3().calcularPromedio();
+        promedioCurso = (promedioEstuadiante1+promedioEstuadiante2+promedioEstuadiante3)/3;
+
+        return promedioCurso;
+    }
+}

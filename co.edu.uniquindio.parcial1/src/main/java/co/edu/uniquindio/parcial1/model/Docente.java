@@ -4,7 +4,6 @@ public class Docente {
     private String nombre;
     private int edad;
     private String correo;
-    
 
     public Docente(String nombre, int edad, String correo) {
         this.nombre = nombre;
@@ -36,17 +35,18 @@ public class Docente {
         this.correo = correo;
     }
 
-    public double calcularPromedioCurso(double notaEstudiante1,double notaEstudiante2, double notaEstudiante3){
+
+    /**
+     * Metodo que calcula el promedio del curso
+     * @param notaEstudiante1
+     * @param notaEstudiante2
+     * @param notaEstudiante3
+     * @return double promedioCurso
+     */
+    public double calcularPromedioCurso(double notaEstudiante1,double notaEstudiante2, double notaEstudiante3 ){
         double promedioCurso = 0.0;
         promedioCurso = (notaEstudiante1+notaEstudiante2+notaEstudiante3)/3;
 
         return promedioCurso;
-
-    }
-
-    {
-
-
-
     }
 }

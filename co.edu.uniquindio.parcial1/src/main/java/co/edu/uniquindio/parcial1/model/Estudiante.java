@@ -9,12 +9,12 @@ public class Estudiante {
     private double nota2;
     private double nota3;
 
-
     /*Constructor*/
-    public Estudiante (){
+    public Estudiante(){
+
     }
 
-    public Estudiante(String nombre, int edad, String correo, int semestre, double nota1, double nota2, double nota3) {
+    public Estudiante(String nombre, int edad, String correo, int semestre, double nota1, double nota2, double nota3){
         this.nombre = nombre;
         this.edad = edad;
         this.correo = correo;
@@ -24,8 +24,7 @@ public class Estudiante {
         this.nota3 = nota3;
     }
 
-        /*Getters and setters*/
-
+    /*  Getters y Setters*/
     public String getNombre() {
         return nombre;
     }
@@ -81,4 +80,30 @@ public class Estudiante {
     public void setNota3(double nota3) {
         this.nota3 = nota3;
     }
+
+    /**
+     * Metodo que retorma la informacion del estudiante
+     * @return
+     */
+    public String obtenerInformacion() {
+        String informacion = "";
+        informacion = informacion +
+                "nombre: "+getNombre() + "\n"+
+                "edad: "+getEdad() + "\n"+
+                "correo: "+getCorreo() + "\n"+
+                "semestre: "+getSemestre() + "\n"+
+                "nota1: "+getNota1() + "\n"+
+                "nota2: "+getNota2() + "\n"+
+                "nota3: "+getNota3() + "\n";
+
+        return informacion;
+    }
+
+    public double calcularPromedio(){
+        double promedio = 0.0;
+        promedio = (getNota1() + getNota2() + getNota3())/3;
+
+        return promedio;
+    }
+
 }
