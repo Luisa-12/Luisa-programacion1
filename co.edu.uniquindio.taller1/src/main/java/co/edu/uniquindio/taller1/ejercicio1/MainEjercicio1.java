@@ -14,6 +14,8 @@ public class MainEjercicio1 {
         /*Solictar promedio del curso*/
         double promedioCurso = curso.obtenerPromedioCurso();
 
+        System.out.println(("El promedio del curso es:" + promedioCurso));
+
     }
 
     private static Curso inicializaDatosPrueba() {
